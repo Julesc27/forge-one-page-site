@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPI Forge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --panel: rgba(255, 255, 255, 0.9);
+        --panel-solid: #ffffff;
+        --text: #151b31;
+        --muted: #6f7c98;
+        --line: #dfe5f0;
+        --shadow: 0 18px 40px rgba(28, 39, 76, 0.08);
+        --red: #b71f26;
+        --red-dark: #8f181d;
+        --gray: #909090;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(183, 31, 38, 0.1), transparent 28%),
+          radial-gradient(circle at top right, rgba(144, 144, 144, 0.1), transparent 24%),
+          linear-gradient(180deg, #f8fafc 0%, #eef3f8 100%);
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .hero {
+        padding: 28px 0 22px;
+      }
+
+      .hero-card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 250, 252, 0.96));
+        border: 1px solid rgba(223, 229, 240, 0.95);
+        border-radius: 34px;
+        box-shadow: var(--shadow);
+        padding: 40px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero-card::before {
+        content: '';
+        position: absolute;
+        inset: auto -120px -120px auto;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: rgba(183, 31, 38, 0.06);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .hero-text {
+        max-width: 700px;
+      }
+
+      .hero-logo {
+        width: 180px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(223, 229, 240, 0.95);
+        color: var(--muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      h1 {
+        margin: 18px 0 14px;
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        line-height: 1.03;
+        letter-spacing: -0.05em;
+      }
+
+      .gradient-text {
+        background: linear-gradient(90deg, var(--red) 0%, #cb3c42 48%, #7e7e7e 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero p {
+        max-width: 760px;
+        margin: 0;
+        color: #576480;
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      .hero-note {
+        margin-top: 18px;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--red);
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: 28px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 56px;
+        padding: 0 24px;
+        border-radius: 18px;
+        border: 1px solid transparent;
+        font-weight: 700;
+        font-size: 1rem;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-1px);
+      }
+
+      .button-primary {
+        background: linear-gradient(180deg, #c2252d 0%, var(--red-dark) 100%);
+        color: white;
+        box-shadow: 0 14px 30px rgba(183, 31, 38, 0.22);
+      }
+
+      .button-secondary {
+        background: #7289DA;
+        border-color: rgba(223, 229, 240, 1);
+        color: #ffff;
+      }
+
+      .grid {
+        display: grid;
+        gap: 22px;
+      }
+
+      .section {
+        padding: 18px 0 22px;
+      }
+
+      .section-heading {
+        margin-bottom: 18px;
+      }
+
+      .section-heading h2 {
+        margin: 0;
+        font-size: 2rem;
+        letter-spacing: -0.04em;
+        color: #b71f26;
+      }
+
+      .section-heading p {
+        margin: 8px 0 0;
+        color: var(--muted);
+      }
+
+      .pricing-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid rgba(223, 229, 240, 0.92);
+        border-radius: 28px;
+        padding: 30px;
+        box-shadow: var(--shadow);
+      }
+
+      .card h3 {
+        margin: 0 0 18px;
+        font-size: 1.4rem;
+        letter-spacing: -0.03em;
+      }
+
+      .price-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 0;
+        border-top: 1px solid rgba(223, 229, 240, 0.92);
+      }
+
+      .price-row:first-of-type {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .price-row span:first-child {
+        color: #44506b;
+        font-weight: 600;
+      }
+
+      .price-row span:last-child {
+        color: var(--text);
+        text-align: right;
+        font-weight: 700;
+      }
+
+      .calendar-wrap {
+        margin-top: 10px;
+      }
+
+      .calendar-frame {
+        width: 100%;
+        height: 900px;
+        border: 0;
+        border-radius: 28px;
+        background: #f5f7fb;
+        box-shadow: var(--shadow);
+      }
+
+      .resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card-title {
+        margin: 0 0 10px;
+        color: #8a96b0;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .resource-card h2 {
+        margin: 0;
+        font-size: 1.85rem;
+        letter-spacing: -0.04em;
+      }
+
+      .resource-card p {
+        margin: 14px 0 0;
+        color: #5f6c88;
+        line-height: 1.8;
+      }
+
+      .feature-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--red);
+        font-weight: 700;
+        margin-top: 20px;
+      }
+
+      .feature-link::after {
+        content: '→';
+      }
+
+      .footer {
+        padding: 12px 0 40px;
+        color: #8090ae;
+        font-size: 0.95rem;
+        text-align: center;
+      }
+
+      @media (max-width: 900px) {
+        .pricing-grid,
+        .resource-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .calendar-frame {
+          height: 760px;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .container {
+          width: min(100% - 20px, 1180px);
+        }
+
+        .hero-card,
+        .card {
+          padding: 24px;
+          border-radius: 24px;
+        }
+
+        .hero-logo {
+          width: 130px;
+        }
+
+        .button {
+          width: 100%;
+        }
+
+        .calendar-frame {
+          height: 680px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero" id="home">
+        <div class="hero-card">
+          <div class="hero-content">
+            <img src="forge/logo.svg" alt="RPI Forge logo" class="hero-logo" />
+
+            <div class="hero-text">
+              <div class="eyebrow">Rensselaer Polytechnic Institute</div>
+              <div class="eyebrow">School of Engineering</div>
+              <h1>
+                Welcome to <span class="gradient-text">The Forge</span>
+              </h1>
+              <h2>Drop in and check us out: We're located in CII 2037A!</h2>
+              <p>
+                Check materials pricing, join the Discord, submit a machine usage form,
+                and view the Forge calendar all in one place.
+              </p>
+
+              <div class="hero-note">New Forge site coming soon.</div>
+
+              <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScNl-fDrDqmEK140np7abSHUxjV8ieh1rOMNKs28RcbDxl01Q/viewform"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Use a Machine
+              </a>
+              <a
+                class="button button-secondary"
+                href="https://discord.gg/ZxUXDH3Me"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Join Discord
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pricing">
+        <div class="section-heading">
+          <h2>Materials Pricing</h2>
+          <h3>Membership price is $20 once a semester to use all the machines in The Forge.</h3>
+        </div>
+
+        <div class="grid pricing-grid">
+          <article class="card">
+            <h3>Filament</h3>
+            <div class="price-row"><span>PLA</span><span>$0.06 / gram</span></div>
+            <div class="price-row"><span>PETG / ABS</span><span>$0.09 / gram</span></div>
+            <div class="price-row"><span>TPU</span><span>$0.09 / gram</span></div>
+          </article>
+
+          <article class="card">
+            <h3>Resin</h3>
+            <div class="price-row"><span>Grey</span><span>$0.18 / mL</span></div>
+            <div class="price-row"><span>Clear</span><span>$0.18 / mL</span></div>
+          </article>
+
+          <article class="card">
+            <h3>Vinyl</h3>
+            <div class="price-row">
+              <span>Standard</span>
+              <span>$0.20 / in vinyl<br />$2.00 / cm3 ink</span>
+            </div>
+            <div class="price-row">
+              <span>Holographic</span>
+              <span>$0.50 / in vinyl<br />$2.00 / cm3 ink</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="calendar">
+        <div class="section-heading">
+          <h2>Forge Calendar</h2>
+          <p>See the weekly volunteer schedule.</p>
+        </div>
+
+        <div class="calendar-wrap">
+          <iframe
+            class="calendar-frame"
+            src="https://calendar.google.com/calendar/embed?src=k2r6osjjms6lqt41bi5a7j48n0%40group.calendar.google.com&ctz=America%2FNew_York&mode=WEEK"
+            frameborder="0"
+            scrolling="no"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="section" id="resources">
+        <div class="section-heading">
+          <h2>Resources</h2>
+          <p>Quick links for the Forge community.</p>
+        </div>
+
+        <div class="grid resource-grid">
+          <article class="card resource-card">
+            <p class="card-title">Community</p>
+            <h2>Join the Discord</h2>
+            <p>
+              Ask questions, get support using the machines, and stay updated on
+              everything happening at the Forge.
+            </p>
+            <a
+              class="feature-link"
+              href="https://discord.gg/ZxUXDH3Me"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Discord
+            </a>
+          </article>
+
+          <article class="card resource-card">
+            <p class="card-title">Machine Usage Form</p>
+            <h2>Submit Your Usage</h2>
+            <p>
+              Log your machine usage with the Google Form so Forge activity stays
+              tracked and up to date.
+            </p>
+            <a
+              class="feature-link"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScNl-fDrDqmEK140np7abSHUxjV8ieh1rOMNKs28RcbDxl01Q/viewform"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open Google Form
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      Assosiated with Rensselaer Polytechnic Institute and School of Engineering
+    </footer>
+  </body>
+</html>
