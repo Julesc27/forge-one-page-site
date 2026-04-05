@@ -29,6 +29,23 @@
       color: var(--abyss);
     }
 
+    /* ── SINGLE CONTINUOUS BACKGROUND PATTERN ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTU5IiBoZWlnaHQ9IjY3MCIgdmlld0JveD0iMCAwIDE1OSA2NzAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81M183MykiPgo8cmVjdCB3aWR0aD0iMTU5IiBoZWlnaHQ9IjY3MCIgZmlsbD0ibm9uZSIvPgo8cmVjdCB4PSIxMCIgeT0iMTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjEwIiB5PSIxMjAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjEwIiB5PSIyMzAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjEwIiB5PSIzNDAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjEwIiB5PSI0NTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjEwIiB5PSI1NjAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjMwIiB5PSItNTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjMwIiB5PSI2MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMzAiIHk9IjE3MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMzAiIHk9IjI4MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMzAiIHk9IjM5MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMzAiIHk9IjUwMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMzAiIHk9IjYxMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iNTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI1MCIgeT0iMTIwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI1MCIgeT0iMjMwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI1MCIgeT0iMzQwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI1MCIgeT0iNDUwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI1MCIgeT0iNTYwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI3MCIgeT0iLTUwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI3MCIgeT0iNjAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjcwIiB5PSIxNzAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjcwIiB5PSIyODAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjcwIiB5PSIzOTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjcwIiB5PSI1MDAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjcwIiB5PSI2MTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjEyOSIgeT0iMTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjEyOSIgeT0iMTIwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSIxMjkiIHk9IjIzMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMTI5IiB5PSIzNDAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjEyOSIgeT0iNDUwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSIxMjkiIHk9IjU2MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMTQ5IiB5PSItNTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjE0OSIgeT0iNjAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjE0OSIgeT0iMTcwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSIxNDkiIHk9IjI4MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMTQ5IiB5PSIzOTAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjE0OSIgeT0iNTAwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSIxNDkiIHk9IjYxMCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iOTAiIHk9IjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI5MCIgeT0iMTIwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI5MCIgeT0iMjMwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI5MCIgeT0iMzQwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI5MCIgeT0iNDUwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSI5MCIgeT0iNTYwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSIxMTAiIHk9Ii01MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMTEwIiB5PSI2MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMTEwIiB5PSIxNzAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjExMCIgeT0iMjgwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8cmVjdCB4PSIxMTAiIHk9IjM5MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwMCIgcng9IjUiIGZpbGw9IiMyRDRBODAiLz4KPHJlY3QgeD0iMTEwIiB5PSI1MDAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMDAiIHJ4PSI1IiBmaWxsPSIjMkQ0QTgwIi8+CjxyZWN0IHg9IjExMCIgeT0iNjEwIiB3aWR0aD0iMTAiIGhlaWdodD0iMTAwIiByeD0iNSIgZmlsbD0iIzJENEE4MCIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzUzXzczIj4KPHJlY3Qgd2lkdGg9IjE1OSIgaGVpZ2h0PSI2NzAiIGZpbGw9Im5vbmUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K");
+      background-size: 159px 670px;
+      background-repeat: repeat;
+      transform: rotate(45deg) scale(2.5);
+      transform-origin: center;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .container {
       max-width: var(--max-w);
       margin: 0 auto;
@@ -37,7 +54,7 @@
 
     /* ── NAV ── */
     nav {
-      background: var(--white);
+      background: rgba(255,255,255,0.97);
       border-bottom: 1px solid var(--border);
       height: 64px;
       position: sticky;
@@ -99,57 +116,37 @@
     .section-divider {
       height: 6px;
       background: linear-gradient(to right, var(--anvil) 0%, var(--anvil) 35%, var(--navy) 65%, var(--navy) 100%);
-    }
-    .hero::before,
-    .materials::before,
-    .banned::before,
-    .about::before,
-    .calendar-section::before,
-    .resources-band::before,
-    footer::before{
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: url("back.svg");
-      background-size: 159px 670px;
-      background-repeat: repeat;
-      transform: rotate(45deg) scale(2.5);
-      transform-origin: center;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.07;
-    }
-    .mat-card,
-    .about-text-card,
-    .about-ig-card,
-    .resources-band,
-    .banned-card,
-    .banned-card-head,
-    .resource-card-dark,
-    .resource-card-light,
-    .hero-card,
-    .calendar-embed,
-    .banned-note {
       position: relative;
       z-index: 1;
     }
-    .hero, .materials,
-    .banned,
-    .about,
-    .calendar-section,
-    .resources,
-    footer{ background: var(--base); padding: 64px 0; position: relative; overflow: hidden;}
-    /* ── HERO ── */
-    .hero {
-      background: var(--base);
-      padding: 64px 0 72px;
+
+    /* ── ALL SECTIONS — semi-transparent so pattern shows through ── */
+    .hero,
+    .materials,
+    .about {
+      background: rgba(242, 244, 248, 0.85);
+      padding: 64px 0;
+      position: relative;
+      z-index: 1;
     }
+    .banned,
+    .calendar-section,
+    .resources-band {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 56px 0 64px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero { padding: 64px 0 72px; }
+    .resources-band { padding: 48px 0; }
+
+    /* ── HERO ── */
     .hero .container {
       display: grid;
       grid-template-columns: 280px 1fr;
       gap: 40px;
       align-items: start;
-      position: relative; z-index: 1;
     }
     .hero-left { padding-top: 8px; }
     .hero-headline {
@@ -264,10 +261,6 @@
     .btn-anvil:hover { background: #8B1414; }
 
     /* ── RESOURCES BAND ── */
-    .resources-band {
-      background: var(--base);
-      padding: 48px 0;
-    }
     .resources-band .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -329,7 +322,7 @@
     }
     .discord-icon-box svg { width: 36px; height: 36px; fill: white; }
     .form-card {
-      background: var(--white);
+      background: rgba(255,255,255,0.97);
       border: 1.5px solid var(--border);
       border-radius: 14px;
       padding: 24px 20px 24px 24px;
@@ -374,10 +367,6 @@
     }
 
     /* ── MATERIALS ── */
-    .materials {
-      background: var(--base);
-      padding: 56px 0 64px;
-    }
     .section-heading {
       font-size: 28px;
       font-weight: 800;
@@ -396,7 +385,7 @@
       gap: 16px;
     }
     .mat-card {
-      background: var(--white);
+      background: rgba(255,255,255,0.97);
       border: 1.5px solid var(--border);
       border-radius: 14px;
       padding: 22px 20px 18px;
@@ -442,10 +431,6 @@
     }
 
     /* ── BANNED ── */
-    .banned {
-      background: var(--white);
-      padding: 56px 0 64px;
-    }
     .banned-header {
       display: flex;
       align-items: center;
@@ -468,7 +453,7 @@
       gap: 16px;
     }
     .banned-card {
-      background: var(--white);
+      background: rgba(255,255,255,0.97);
       border: 1.5px solid var(--border);
       border-radius: 14px;
       overflow: hidden;
@@ -507,10 +492,6 @@
     }
 
     /* ── ABOUT ── */
-    .about {
-      background: var(--base);
-      padding: 56px 0 64px;
-    }
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 280px;
@@ -518,7 +499,7 @@
       margin-top: 24px;
     }
     .about-text-card {
-      background: var(--white);
+      background: rgba(255,255,255,0.97);
       border: 1.5px solid var(--border);
       border-radius: 14px;
       padding: 32px 36px;
@@ -569,10 +550,6 @@
     .btn-ig:hover { opacity: 0.85; }
 
     /* ── CALENDAR ── */
-    .calendar-section {
-      background: var(--white);
-      padding: 56px 0 64px;
-    }
     .calendar-section .section-heading {
       text-align: center;
       font-size: 28px;
@@ -598,6 +575,8 @@
       background: var(--abyss);
       border-top: 3px solid var(--anvil);
       padding: 28px 0;
+      position: relative;
+      z-index: 1;
     }
     .footer-inner {
       max-width: var(--max-w);
@@ -743,42 +722,32 @@
       <h2 class="section-heading">Materials Pricing</h2>
       <p class="section-sub">Everything you need to start creating!</p>
       <div class="materials-grid">
-
         <div class="mat-card">
           <div class="mat-card-header">
             <span class="mat-card-title">Filament</span>
-            <div class="mat-icon">
-              <img src="filament.png" alt="Filament spool" />
-            </div>
+            <div class="mat-icon"><img src="filament.png" alt="Filament spool" /></div>
           </div>
           <div class="mat-row"><span class="mat-row-name">PLA</span><span class="mat-row-price">$0.06<span class="mat-row-unit"> /gram</span></span></div>
           <div class="mat-row"><span class="mat-row-name">PETG</span><span class="mat-row-price">$0.09<span class="mat-row-unit"> /gram</span></span></div>
           <div class="mat-row"><span class="mat-row-name">TPU</span><span class="mat-row-price">$0.09<span class="mat-row-unit"> /gram</span></span></div>
         </div>
-
         <div class="mat-card">
           <div class="mat-card-header">
             <span class="mat-card-title">Resin</span>
-            <div class="mat-icon">
-              <img src="resin.png" alt="Resin bottle" />
-            </div>
+            <div class="mat-icon"><img src="resin.png" alt="Resin bottle" /></div>
           </div>
           <div class="mat-row"><span class="mat-row-name">Clear</span><span class="mat-row-price">$0.18<span class="mat-row-unit"> /mL</span></span></div>
           <div class="mat-row"><span class="mat-row-name">Grey</span><span class="mat-row-price">$0.18<span class="mat-row-unit"> /mL</span></span></div>
         </div>
-
         <div class="mat-card">
           <div class="mat-card-header">
             <span class="mat-card-title">Vinyl</span>
-            <div class="mat-icon">
-              <img src="vinyl.png" alt="Vinyl roll" />
-            </div>
+            <div class="mat-icon"><img src="vinyl.png" alt="Vinyl roll" /></div>
           </div>
           <div class="mat-row"><span class="mat-row-name">Standard</span><span class="mat-row-price">$0.20<span class="mat-row-unit"> /in</span></span></div>
           <div class="mat-row"><span class="mat-row-name">Holographic</span><span class="mat-row-price">$0.50<span class="mat-row-unit"> /in</span></span></div>
           <div class="mat-row"><span class="mat-row-name">Ink</span><span class="mat-row-price">$2.00<span class="mat-row-unit"> /cc</span></span></div>
         </div>
-
       </div>
     </div>
   </section>
@@ -799,9 +768,7 @@
       </div>
       <div class="banned-grid">
         <div class="banned-card">
-          <div class="banned-card-head">
-            <p class="banned-card-title">Banned Material Types</p>
-          </div>
+          <div class="banned-card-head"><p class="banned-card-title">Banned Material Types</p></div>
           <ul class="banned-list">
             <li><span class="banned-dot"></span>Particulate Filaments</li>
             <li><span class="banned-dot"></span>Wood</li>
@@ -814,9 +781,7 @@
           </ul>
         </div>
         <div class="banned-card">
-          <div class="banned-card-head">
-            <p class="banned-card-title">Banned Brands</p>
-          </div>
+          <div class="banned-card-head"><p class="banned-card-title">Banned Brands</p></div>
           <ul class="banned-list">
             <li><span class="banned-dot"></span>Sunlu</li>
             <li><span class="banned-dot"></span>Elegoo</li>
