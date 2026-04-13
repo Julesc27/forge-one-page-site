@@ -87,10 +87,18 @@
       white-space: nowrap;
     }
     .nav-rpi {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .nav-rpi img {
+    display: block;
+    height: 40px;   /* adjust to 32px or 36px if needed */
+    width: auto;
+    max-width: 160px;
+    object-fit: contain;
+  }
     .nav-rpi-letters {
       font-size: 22px;
       font-weight: 800;
@@ -645,9 +653,7 @@
         <span class="nav-wordmark">THE FORGE | The MILL</span>
       </div>
       <div class="nav-rpi">
-        <span class="nav-rpi-letters">RPI</span>
-        <div class="nav-rpi-divider"></div>
-        <div class="nav-rpi-sub">SCHOOL OF<br>ENGINEERING</div>
+        <img src="RPI_Lockup_Eng_Sm.svg">
       </div>
     </div>
   </nav>
